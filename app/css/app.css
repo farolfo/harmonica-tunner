@@ -90,6 +90,12 @@ body {
     background-color: rgb(73, 73, 73);
     top: 0.5em;
     position: absolute;
+    text-align: center;
+    color: white;
+}
+
+.harmonica .cell label {
+    padding-top: 1.2em;
 }
 
 .harmonica .cell.cell1 {
@@ -129,6 +135,7 @@ body {
     border-radius: 3px;
     background-color: rgb(168, 168, 192);
     position: absolute;
+    text-align: center;
 }
 
 .harmonica .cell .note.note1b {
@@ -151,5 +158,9 @@ body {
 }
 .harmonica .cell .note.note4d {
     top: 18.5em;
+}
+
+.harmonica .cell .note label {
+    padding-top: 1.2em;
 }
 
