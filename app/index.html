@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+    <div class="main-body">
+
+        <div class="header">
+            <div class="title">
+                harmonica tuner
+            </div>
+            <a class="item">about</a>
+        </div>
+
+        <div class="sidebar">
+            <div class="item">
+                <label>A</label>
+            </div>
+            <div class="item active">
+                <label>B</label>
+            </div>
+            <div class="item">
+                <label>C</label>
+            </div>
+            <div class="item">
+                <label>D</label>
+            </div>
+            <div class="item">
+                <label>E</label>
+            </div>
+            <div class="item">
+                <label>F</label>
+            </div>
+            <div class="item">
+                <label>G</label>
+            </div>
+        </div>
+
+        <div class="harmonica-container">
+            <div class="harmonica">
+                <div class="cell">
+                </div>
+                <div class="cell">
+                </div>
+                <div class="cell">
+                </div>
+                <div class="cell">
+                </div>
+                <div class="cell">
+                </div>
+                <div class="cell">
+                </div>
+                <div class="cell">
+                </div>
+                <div class="cell">
+                </div>
+                <div class="cell">
+                </div>
+                <div class="cell">
+                </div>
+            </div>
+        </div>
+
+        <div ng-view></div>
+
+    </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>

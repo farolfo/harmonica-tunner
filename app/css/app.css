@@ -1,0 +1,84 @@
+.header {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    height: 4em;
+    color: white;
+}
+
+.header .title {
+    display: inline-block;
+    padding-left: 2em;
+    margin-top: 0.5em;
+    font-size: x-large;
+}
+
+.header .item {
+    float: right;
+    padding-right: 2em;
+    margin-top: 1.25em;
+    color: white;
+}
+
+body {
+    background: #f2f2f2 url(/app/img/wall.jpg) repeat;
+}
+
+.main-body {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar {
+    margin-top: 4em;
+    position: fixed;
+    width: 8em;
+    overflow-y: scroll;
+    border-right: 1px solid grey;
+    z-index: -3;
+    height: 100%;
+}
+
+.sidebar .item {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    height: 5em;
+}
+
+.sidebar .item label {
+    font-size: xx-large;
+    margin-top: 11%;
+}
+
+.sidebar .item.active:after {
+    content: ' ';
+    background-color: red;
+    height: 100%;
+    width: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sidebar .item.active {
+    color: red;
+}
+
+.harmonica-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.harmonica {
+    width: 34em;
+    height: 4em;
+    position: relative;
+    background-color: lightgrey;
+    border-radius: 5px;
+    margin: 22% 0 0 31%;
+}
