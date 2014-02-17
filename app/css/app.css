@@ -80,7 +80,7 @@ body {
     position: relative;
     background-color: lightgrey;
     border-radius: 5px;
-    margin: 22% 0 0 31%;
+    margin: 26% 0 0 24%;
 }
 
 .harmonica .cell {
@@ -122,3 +122,34 @@ body {
 .harmonica .cell.cell10 {
     left: 44.5em;
 }
+
+.harmonica .cell .note {
+    width: 4em;
+    height: 4em;
+    border-radius: 3px;
+    background-color: rgb(168, 168, 192);
+    position: absolute;
+}
+
+.harmonica .cell .note.note1b {
+    top: -5em;
+}
+.harmonica .cell .note.note2b {
+    top: -9.5em;
+}
+.harmonica .cell .note.note3b {
+    top: -14em;
+}
+.harmonica .cell .note.note1d {
+    top: 5em;
+}
+.harmonica .cell .note.note2d {
+    top: 9.5em;
+}
+.harmonica .cell .note.note3d {
+    top: 14em;
+}
+.harmonica .cell .note.note4d {
+    top: 18.5em;
+}
+
