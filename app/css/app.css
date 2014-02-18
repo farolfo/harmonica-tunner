@@ -1,166 +1,152 @@
 .header {
-    font-family: 'Ubuntu Condensed', sans-serif;
-    width: 100%;
-    position: fixed;
-    background-color: black;
-    height: 4em;
-    color: white;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  height: 4em;
+  color: white;
 }
-
 .header .title {
-    display: inline-block;
-    padding-left: 2em;
-    margin-top: 0.5em;
-    font-size: x-large;
+  display: inline-block;
+  padding-left: 2em;
+  margin-top: 0.5em;
+  font-size: x-large;
 }
-
 .header .item {
-    float: right;
-    padding-right: 2em;
-    margin-top: 1.25em;
-    color: white;
+  float: right;
+  padding-right: 2em;
+  margin-top: 1.25em;
+  color: white;
 }
-
 body {
-    background: #f2f2f2 url('./../img/wall.jpg') repeat;
+  background: #f2f2f2 url('../img/wall.jpg') repeat;
 }
-
 .main-body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-
 .sidebar {
-    margin-top: 4em;
-    position: fixed;
-    width: 8em;
-    overflow-y: scroll;
-    border-right: 1px solid rgb(198, 198, 199);
-    z-index: -3;
-    height: 100%;
+  margin-top: 4em;
+  position: fixed;
+  width: 8em;
+  overflow-y: scroll;
+  border-right: 1px solid #c6c6c7;
+  z-index: -3;
+  height: 100%;
 }
-
 .sidebar .item {
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-    height: 5em;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  height: 5em;
 }
-
 .sidebar .item label {
-    font-size: xx-large;
-    margin-top: 11%;
+  font-size: xx-large;
+  margin-top: 11%;
 }
-
 .sidebar .item.active:after {
-    content: ' ';
-    background-color: #3BB881;
-    height: 100%;
-    width: 1em;
-    position: absolute;
-    top: 0;
-    left: 0;
+  content: ' ';
+  background-color: #3BB881;
+  height: 100%;
+  width: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-
 .sidebar .item.active {
-    color: #3BB881;
+  color: #3BB881;
 }
-
 .harmonica-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
-
 .harmonica {
-    width: 52.5em;
-    height: 5em;
-    position: relative;
-    background-color: lightgrey;
-    border-radius: 5px;
-    margin: 26% 0 0 24%;
+  width: 57em;
+  height: 5em;
+  position: relative;
+  background-color: lightgrey;
+  border-radius: 5px;
+  margin: 26% 0 0 24%;
 }
-
 .harmonica .cell {
-    width: 4em;
-    height: 4em;
-    border-radius: 3px;
-    background-color: rgb(73, 73, 73);
-    top: 0.5em;
-    position: absolute;
-    text-align: center;
-    color: white;
+  width: 4em;
+  height: 4em;
+  border-radius: 3px;
+  background-color: #494949;
+  top: 0.5em;
+  position: absolute;
+  text-align: center;
+  color: white;
 }
-
 .harmonica .cell label {
-    padding-top: 1.2em;
+  padding-top: 0.5em;
+  font-size: x-large;
+  font-weight: 100;
 }
-
 .harmonica .cell.cell1 {
-    left: 4em;
+  left: 4em;
 }
 .harmonica .cell.cell2 {
-    left: 8.5em;
+  left: 9em;
 }
 .harmonica .cell.cell3 {
-    left: 13em;
+  left: 14em;
 }
 .harmonica .cell.cell4 {
-    left: 17.5em;
+  left: 19em;
 }
 .harmonica .cell.cell5 {
-    left: 22em;
+  left: 24em;
 }
 .harmonica .cell.cell6 {
-    left: 26.5em;
+  left: 29em;
 }
 .harmonica .cell.cell7 {
-    left: 31em;
+  left: 34em;
 }
 .harmonica .cell.cell8 {
-    left: 35.5em;
+  left: 39em;
 }
 .harmonica .cell.cell9 {
-    left: 40em;
+  left: 44em;
 }
 .harmonica .cell.cell10 {
-    left: 44.5em;
+  left: 49em;
 }
-
 .harmonica .cell .note {
-    width: 4em;
-    height: 4em;
-    border-radius: 3px;
-    background-color: rgb(168, 168, 192);
-    position: absolute;
-    text-align: center;
+  width: 4em;
+  height: 4em;
+  border-radius: 3px;
+  background-color: #ff572d;
+  position: absolute;
+  text-align: center;
 }
-
 .harmonica .cell .note.note1b {
-    top: -5em;
+  top: -5em;
 }
 .harmonica .cell .note.note2b {
-    top: -9.5em;
+  top: -9.5em;
 }
 .harmonica .cell .note.note3b {
-    top: -14em;
+  top: -14em;
 }
 .harmonica .cell .note.note1d {
-    top: 5em;
+  top: 5em;
 }
 .harmonica .cell .note.note2d {
-    top: 9.5em;
+  top: 9.5em;
 }
 .harmonica .cell .note.note3d {
-    top: 14em;
+  top: 14em;
 }
 .harmonica .cell .note.note4d {
-    top: 18.5em;
+  top: 18.5em;
 }
-
 .harmonica .cell .note label {
-    padding-top: 1.2em;
+  padding-top: 0.5em;
+  font-size: x-large;
+  font-weight: 400;
 }
-
