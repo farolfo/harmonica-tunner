@@ -54,9 +54,6 @@ angular.module('myApp.directives', []).
             },
 
             link: function (scope, elem, attrs) {
-                scope.$watch('key', function() {
-                    debugger
-                });
             }
         };
     });
