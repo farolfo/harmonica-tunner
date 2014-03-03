@@ -34,7 +34,9 @@ angular.module('myApp.directives', []).
             },
 
             link: function (scope, elem, attrs) {
-                scope.notes = HarmonicaService.getNotes(scope.mainKey, scope.number);
+                scope.$watch('mainKey', function(){
+                    scope.notes = HarmonicaService.getNotes(scope.mainKey, scope.number);
+                }, true);
             }
         };
     }]).
@@ -52,7 +54,9 @@ angular.module('myApp.directives', []).
             },
 
             link: function (scope, elem, attrs) {
-
+                scope.$watch('key', function() {
+                    debugger
+                });
             }
         };
     });

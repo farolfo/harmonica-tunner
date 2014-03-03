@@ -1,5 +1,9 @@
 <div class="cell" ng-class="'cell' + number">
     <label>{{number}}</label>
-    <fa-harmonica-note type="'b'" ng-repeat="note in notes.blow" key="note.key" index="$index + 1"></fa-harmonica-note>
-    <fa-harmonica-note type="'d'" ng-repeat="note in notes.draw" key="note.key" index="$index + 1"></fa-harmonica-note>
+    <div ng-repeat="note in notes.blow">
+        <fa-harmonica-note type="'b'"  key="note.key" index="$index + 1"></fa-harmonica-note>
+    </div>
+    <div ng-repeat="note in notes.blow">
+        <fa-harmonica-note type="'d'" ng-repeat="note in notes.draw" key="note.key" index="$index + 1"></fa-harmonica-note>
+    </div>
 </div>

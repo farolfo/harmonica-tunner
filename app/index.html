@@ -6,9 +6,27 @@
     <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css"/>
+
+    <script src="lib/angular/angular.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <script src="js/harmonicas/a.js"></script>
+    <script src="js/harmonicas/b.js"></script>
+    <script src="js/harmonicas/c.js"></script>
+    <script src="js/harmonicas/d.js"></script>
+    <script src="js/harmonicas/e.js"></script>
+    <script src="js/harmonicas/f.js"></script>
+    <script src="js/harmonicas/g.js"></script>
+    <script src="js/harmonicas/harmonicas.js"></script>
+
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
 </head>
 <body>
-    <div class="main-body">
+    <div class="main-body" ng-controller="HarmonicaTunerCtrl">
 
         <div class="header">
             <div class="title">
@@ -18,30 +36,12 @@
         </div>
 
         <div class="sidebar">
-            <div class="item">
-                <label>A</label>
-            </div>
-            <div class="item active">
-                <label>B</label>
-            </div>
-            <div class="item">
-                <label>C</label>
-            </div>
-            <div class="item">
-                <label>D</label>
-            </div>
-            <div class="item">
-                <label>E</label>
-            </div>
-            <div class="item">
-                <label>F</label>
-            </div>
-            <div class="item">
-                <label>G</label>
+            <div class="item" ng-repeat="key in keys" ng-class="{active : isSelected(key)}" ng-click="selectKey(key);">
+                <label>{{key}}</label>
             </div>
         </div>
 
-        <fa-harmonica main-key="'C'"></fa-harmonica>
+        <fa-harmonica main-key="selectedKey"></fa-harmonica>    <!-- TODO if there is no currentKey, then show a loading-->
 
         <div ng-view></div>
 
@@ -50,11 +50,6 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   -->
-  <script src="lib/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
+
 </body>
 </html>

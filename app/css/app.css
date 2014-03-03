@@ -1,3 +1,10 @@
+body {
+  background: #f2f2f2 url('../img/wall.jpg') repeat;
+}
+.main-body {
+  width: 100%;
+  height: 100%;
+}
 .header {
   font-family: 'Ubuntu Condensed', sans-serif;
   width: 100%;
@@ -18,20 +25,13 @@
   margin-top: 1.25em;
   color: white;
 }
-body {
-  background: #f2f2f2 url('../img/wall.jpg') repeat;
-}
-.main-body {
-  width: 100%;
-  height: 100%;
-}
 .sidebar {
   margin-top: 4em;
   position: fixed;
   width: 8em;
   overflow-y: scroll;
   border-right: 1px solid #c6c6c7;
-  z-index: -3;
+  z-index: 3;
   height: 100%;
 }
 .sidebar .item {
@@ -44,9 +44,16 @@ body {
   font-size: xx-large;
   margin-top: 11%;
 }
-.sidebar .item.active:after {
+.sidebar .item label:hover {
+  cursor: pointer;
+}
+.sidebar .item:hover {
+  cursor: pointer;
+  color: #00b8ff;
+}
+.sidebar .item:hover:after {
   content: ' ';
-  background-color: #3BB881;
+  background-color: #00b8ff;
   height: 100%;
   width: 1em;
   position: absolute;
@@ -54,12 +61,22 @@ body {
   left: 0;
 }
 .sidebar .item.active {
-  color: #3BB881;
+  color: #3bb881;
+}
+.sidebar .item.active:after {
+  content: ' ';
+  background-color: #3bb881;
+  height: 100%;
+  width: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .harmonica-container {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
   height: 100%;
   width: 100%;
 }
@@ -124,6 +141,11 @@ body {
   position: absolute;
   text-align: center;
 }
+.harmonica .cell .note label {
+  padding-top: 0.5em;
+  font-size: x-large;
+  font-weight: 400;
+}
 .harmonica .cell .note.note1b {
   top: -5em;
 }
@@ -144,9 +166,4 @@ body {
 }
 .harmonica .cell .note.note4d {
   top: 18.5em;
-}
-.harmonica .cell .note label {
-  padding-top: 0.5em;
-  font-size: x-large;
-  font-weight: 400;
 }
