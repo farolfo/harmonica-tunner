@@ -29,29 +29,38 @@ body {
   margin-top: 4em;
   position: fixed;
   width: 8em;
-  overflow-y: scroll;
   border-right: 1px solid #c6c6c7;
   z-index: 3;
   height: 100%;
 }
-.sidebar .item {
+.sidebar .sidebar-title {
+  margin-left: 3em;
+  color: grey;
+  font-size: small;
+  font-weight: lighter;
+}
+.sidebar .sidebar-content {
+  overflow-y: scroll;
+  height: inherit;
+}
+.sidebar .sidebar-content .item {
   position: relative;
   text-align: center;
   vertical-align: middle;
   height: 5em;
 }
-.sidebar .item label {
+.sidebar .sidebar-content .item label {
   font-size: xx-large;
   margin-top: 11%;
 }
-.sidebar .item label:hover {
+.sidebar .sidebar-content .item label:hover {
   cursor: pointer;
 }
-.sidebar .item:hover {
+.sidebar .sidebar-content .item:hover {
   cursor: pointer;
   color: #00b8ff;
 }
-.sidebar .item:hover:after {
+.sidebar .sidebar-content .item:hover:after {
   content: ' ';
   background-color: #00b8ff;
   height: 100%;
@@ -60,10 +69,10 @@ body {
   top: 0;
   left: 0;
 }
-.sidebar .item.active {
+.sidebar .sidebar-content .item.active {
   color: #3bb881;
 }
-.sidebar .item.active:after {
+.sidebar .sidebar-content .item.active:after {
   content: ' ';
   background-color: #3bb881;
   height: 100%;

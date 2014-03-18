@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/app.css"/>
 
     <script src="lib/angular/angular.js"></script>
+    <script src="lib/AudioContextMonkeyPatch.js"></script>
 
     <script src="js/app.js"></script>
 
@@ -24,32 +25,39 @@
     <script src="js/controllers.js"></script>
     <script src="js/filters.js"></script>
     <script src="js/directives.js"></script>
+
+    <script src="js/pitchdetector.js"></script>
 </head>
 <body>
     <div class="main-body" ng-controller="HarmonicaTunerCtrl">
 
         <div class="header">
             <div class="title">
-                harmonica tuner
+                harmonica tuner {{note}}
             </div>
             <a class="item">about</a>
         </div>
 
         <div class="sidebar">
-            <div class="item" ng-repeat="key in keys" ng-class="{active : isSelected(key)}" ng-click="selectKey(key);">
-                <label>{{key}}</label>
+            <label class="sidebar-title">Keys</label>
+            <div class="sidebar-content">
+                <div class="item" ng-repeat="key in keys" ng-class="{active : isSelected(key)}" ng-click="selectKey(key);">
+                    <label>{{key}}</label>
+                </div>
             </div>
         </div>
-
+                {{variable}}
         <fa-harmonica main-key="selectedKey"></fa-harmonica>    <!-- TODO if there is no currentKey, then show a loading-->
 
         <div ng-view></div>
 
     </div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-  -->
+
+
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    -->
 
 </body>
 </html>

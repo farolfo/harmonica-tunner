@@ -17,12 +17,12 @@
 
 
 body {
-  background: #f2f2f2 url('./../img/wall.jpg') repeat;
+    background: #f2f2f2 url('./../img/wall.jpg') repeat;
 }
 
 .main-body {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .header {
@@ -34,17 +34,17 @@ body {
     color: white;
 
     .title {
-      display: inline-block;
-      padding-left: 2em;
-      margin-top: 0.5em;
-      font-size: x-large;
+        display: inline-block;
+        padding-left: 2em;
+        margin-top: 0.5em;
+        font-size: x-large;
     }
 
     .item {
-      float: right;
-      padding-right: 2em;
-      margin-top: 1.25em;
-      color: white;
+        float: right;
+        padding-right: 2em;
+        margin-top: 1.25em;
+        color: white;
     }
 }
 
@@ -54,54 +54,65 @@ body {
     margin-top: 4em;
     position: fixed;
     width: 8em;
-    overflow-y: scroll;
     border-right: 1px solid rgb(198, 198, 199);
     z-index: 3;
     height: 100%;
 
-    .item {
-        position: relative;
-        text-align: center;
-        vertical-align: middle;
-        height: 5em;
+    .sidebar-title {
+        margin-left: 3em;
+        color: grey;
+        font-size: small;
+        font-weight: lighter;
+    }
 
-        label {
-            font-size: xx-large;
-            margin-top: 11%;
+    .sidebar-content {
+        overflow-y: scroll;
+        height: inherit;
 
-            &:hover {
-                cursor: pointer;
-            }
-        }
+        .item {
+              position: relative;
+              text-align: center;
+              vertical-align: middle;
+              height: 5em;
 
-        &:hover {
-            cursor: pointer;
-            color: @key-on-hover-color;
-        }
+              label {
+                  font-size: xx-large;
+                  margin-top: 11%;
 
-        &:hover:after {
-          content: ' ';
-          background-color: @selector-on-hover-color;
-          height: 100%;
-          width: @selector-width;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
+                  &:hover {
+                      cursor: pointer;
+                  }
+              }
 
-        &.active {
-            color: @selector-color;
-        }
+              &:hover {
+                  cursor: pointer;
+                  color: @key-on-hover-color;
+              }
 
-        &.active:after {
-            content: ' ';
-            background-color: @selector-color;
-            height: 100%;
-            width: @selector-width;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+              &:hover:after {
+                  content: ' ';
+                  background-color: @selector-on-hover-color;
+                  height: 100%;
+                  width: @selector-width;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+              }
+
+              &.active {
+                  color: @selector-color;
+              }
+
+              &.active:after {
+                  content: ' ';
+                  background-color: @selector-color;
+                  height: 100%;
+                  width: @selector-width;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+              }
+          }
     }
 }
 
@@ -133,40 +144,40 @@ body {
         color: white;
 
         label {
-          padding-top: 0.5em;
-          font-size: x-large;
-          font-weight: 100;
+            padding-top: 0.5em;
+            font-size: x-large;
+            font-weight: 100;
         }
 
         &.cell1 {
-          left: @cell-to-extreme;
+            left: @cell-to-extreme;
         }
         &.cell2 {
-          left: @cell-to-extreme + 1 * @cell-width + 1 * @cell-to-cell-dist;
+            left: @cell-to-extreme + 1 * @cell-width + 1 * @cell-to-cell-dist;
         }
         &.cell3 {
-          left: @cell-to-extreme + 2 * @cell-width + 2 * @cell-to-cell-dist;
+            left: @cell-to-extreme + 2 * @cell-width + 2 * @cell-to-cell-dist;
         }
         &.cell4 {
-          left: @cell-to-extreme + 3 * @cell-width + 3 * @cell-to-cell-dist;
+            left: @cell-to-extreme + 3 * @cell-width + 3 * @cell-to-cell-dist;
         }
         &.cell5 {
-          left: @cell-to-extreme + 4 * @cell-width + 4 * @cell-to-cell-dist;
+            left: @cell-to-extreme + 4 * @cell-width + 4 * @cell-to-cell-dist;
         }
         &.cell6 {
-          left: @cell-to-extreme + 5 * @cell-width + 5 * @cell-to-cell-dist;
+            left: @cell-to-extreme + 5 * @cell-width + 5 * @cell-to-cell-dist;
         }
         &.cell7 {
-          left: @cell-to-extreme + 6 * @cell-width + 6 * @cell-to-cell-dist;
+            left: @cell-to-extreme + 6 * @cell-width + 6 * @cell-to-cell-dist;
         }
         &.cell8 {
-          left: @cell-to-extreme + 7 * @cell-width + 7 * @cell-to-cell-dist;
+            left: @cell-to-extreme + 7 * @cell-width + 7 * @cell-to-cell-dist;
         }
         &.cell9 {
-          left: @cell-to-extreme + 8 * @cell-width + 8 * @cell-to-cell-dist;
+            left: @cell-to-extreme + 8 * @cell-width + 8 * @cell-to-cell-dist;
         }
         &.cell10 {
-          left: @cell-to-extreme + 9 * @cell-width + 9 * @cell-to-cell-dist;
+            left: @cell-to-extreme + 9 * @cell-width + 9 * @cell-to-cell-dist;
         }
 
         .note {
@@ -185,25 +196,25 @@ body {
             }
 
             &.note1b {
-              top: -5em;
+                top: -5em;
             }
             &.note2b {
-              top: -9.5em;
+                top: -9.5em;
             }
             &.note3b {
-              top: -14em;
+                top: -14em;
             }
             &.note1d {
-              top: 5em;
+                top: 5em;
             }
             &.note2d {
-              top: 9.5em;
+                top: 9.5em;
             }
             &.note3d {
-              top: 14em;
+                top: 14em;
             }
             &.note4d {
-              top: 18.5em;
+                top: 18.5em;
             }
         }
     }
@@ -218,12 +229,12 @@ body {
     left: -3em;
 
     &:after {
-      width: 0;
-      height: 0;
-      border-left: 1em solid transparent;
-      border-right: 1em solid transparent;
-      border-bottom: 2em solid grey;
-      content: ' ';
-      position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 1em solid transparent;
+        border-right: 1em solid transparent;
+        border-bottom: 2em solid grey;
+        content: ' ';
+        position: absolute;
     }
   }
